@@ -1,5 +1,6 @@
 from airflow import DAG
-from airflow.operators.pod_operator import PodOperator
+# from airflow.operators.pod_operator import PodOperator
+from airflow.contrib.operators.kubernetes_pod_operator import KubernetesPodOperator
 from datetime import datetime, timedelta
 
 default_args = {
@@ -26,7 +27,7 @@ dag = DAG(
 image = "us-central1-docker.pkg.dev/airflow-gke-377207/airflow-image-repo/test-repo/test-helloworld-image:v1"
 
 
-task = PodOperator(
+task = KubernetesPodOperator(
     task_id='example_task',
     name='example_pod',
     cmds=["echo", "Hello from Artifact Registry!"],
