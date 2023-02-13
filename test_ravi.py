@@ -27,6 +27,7 @@ dag = DAG(
 image = "us-central1-docker.pkg.dev/airflow-gke-377207/airflow-image-repo/test-repo/test-helloworld-image:v1"
 
 
+
 task = KubernetesPodOperator(
     task_id='example_task',
     name='example_pod',
