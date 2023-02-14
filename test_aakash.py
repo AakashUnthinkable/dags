@@ -43,7 +43,7 @@ pod_operator_kwargs = {
     'image_pull_policy': 'Always',
     'image_pull_secrets': [k8s.V1LocalObjectReference('regcred')],
     'in_cluster': True,
-    'resources': resources,
+#     'resources': resources,
     'affinity': affinity,
     'secrets': []
 }
