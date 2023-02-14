@@ -28,7 +28,7 @@ image = "us-central1-docker.pkg.dev/airflow-gke-377207/airflow-image-repo/test-r
 
 
 
-task = KubernetesPodOperator(
+artifact = KubernetesPodOperator(
     task_id='example_task',
     name='example_pod',
     cmds=["echo", "Hello from Artifact Registry!"],
@@ -37,3 +37,4 @@ task = KubernetesPodOperator(
     is_delete_operator_pod=True,
     dag=dag
 )
+artifact
