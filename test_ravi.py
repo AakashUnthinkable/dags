@@ -27,7 +27,7 @@ dag = DAG(
 # image = "gcr.io/<PROJECT_ID>/<REGISTRY_ID>/<IMAGE>:<TAG>"
 # image = "us-central1-docker.pkg.dev/airflow-gke-377207/airflow-image-repo/test-repo/test-helloworld-image:v1"
 # image="gcr.io/etpmlops/airflow-etl:latest"
-image=https://us-central1-docker.pkg.dev/airflow-gke-377207/airflow-image-repo/test-repo/test-helloworld-image:v1
+image="https://us-central1-docker.pkg.dev/airflow-gke-377207/airflow-image-repo/test-repo/test-helloworld-image:v1"
 
 
 artifact = KubernetesPodOperator(
