@@ -7,6 +7,7 @@ default_args = {
     'owner': 'airflow',
     'depends_on_past': False,
     'start_date': datetime(2023, 2, 12),
+    'in_cluster':True,
     'email_on_failure': False,
     'email_on_retry': False,
     'retries': 1,
