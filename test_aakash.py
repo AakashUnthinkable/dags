@@ -7,10 +7,10 @@ from airflow.contrib.operators.kubernetes_pod_operator import KubernetesPodOpera
 from airflow.models import Variable
 from kubernetes.client import models as k8s
 
-resources={
-    'request_cpu': '50m',
-    'request_memory': '150Mi'
-}
+# resources={
+#     'request_cpu': '50m',
+#     'request_memory': '150Mi'
+# }
 
 affinity = {}
 
